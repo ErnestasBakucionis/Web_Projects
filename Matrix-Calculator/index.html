@@ -1,6 +1,11 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <meta charset="UTF-8">
+            <meta name="description" content="Matrix calculation">
+            <meta name="keywords" content="Matrix Calculator, Transpose Matrix, Add Matrix">
+            <meta name="author" content="Ernestas Bakucionis">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Matrix Calculator</title>
             <!-- Boostrap CSS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -15,13 +20,25 @@
         </head>
         <body>
             <h1 class="display-1 text-center">Matrix Calculator</h1>
+            <hr>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-auto">
                         <table class="table">
                             <thead></thead>
                             <tbody>
-                              <tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <h4 class="row justify-content-center">First Matrix (A)</h4>
+                                <form>
+                                    <div class="form-group ">
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                    </div>
+                                </form>
+                            </tr>
+                            <tr>
                                 <th scope="row"></th>
                                 <form>
                                     <div class="form-group">
@@ -30,8 +47,8 @@
                                         <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
                                     </div>
                                 </form>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <th scope="row"></th>
                                 <form>
                                     <div class="form-group">
@@ -40,25 +57,26 @@
                                         <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
                                     </div>
                                 </form>
-                              </tr>
-                              <tr>
-                                <th scope="row"></th>
-                                <form>
-                                    <div class="form-group">
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                    </div>
-                                </form>
-                              </tr>
+                            </tr>
                             </tbody>
-                          </table>
+                        </table>
                     </div>
                     <div class="col-sm-auto">
                         <table class="table">
                             <thead></thead>
                             <tbody>
-                              <tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <h4 class="row justify-content-center">Second Matrix (B)</h4>
+                                <form>
+                                    <div class="form-group">
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
+                                    </div>
+                                </form>
+                            </tr>
+                            <tr>
                                 <th scope="row"></th>
                                 <form>
                                     <div class="form-group">
@@ -67,8 +85,8 @@
                                         <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
                                     </div>
                                 </form>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <th scope="row"></th>
                                 <form>
                                     <div class="form-group">
@@ -77,24 +95,38 @@
                                         <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
                                     </div>
                                 </form>
-                              </tr>
-                              <tr>
-                                <th scope="row"></th>
-                                <form>
-                                    <div class="form-group">
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                        <td><input type="number" class="form-control" aria-label="Small" id="exampleInputPassword1" placeholder="0"></td>
-                                    </div>
-                                </form>
-                              </tr>
+                            </tr>
                             </tbody>
-                          </table>
+                        </table>
                     </div>
                 </div>
+                <hr>
+                <div class="row justify-content-center mx-5 my-4">
+                    <h5 class="row justify-content-center">Matrix Actions Section</h5>
+                    <h6 class="my-3 ">Actions with one matrix <small class="text-muted">(Select matrix first to do stuff with it)</small></h6>
+                    <div class="col text-center my-3">
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-outline-danger" for="option1">Selected Matrix A</label>
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="option2">Selected Matrix B</label>
+                    </div>
+                    <button type="button" class="btn btn-outline-success">Find the determinant</button>
+                    <button type="button" class="btn btn-outline-success">Transpose</button>
+                    <button type="button" class="btn btn-outline-success">Find the inverse</button>
+                    <button type="button" class="btn btn-outline-success">Find the rank</button>
+                    <button type="button" class="btn btn-outline-success">Multiply by 2</button> 
+                    <button type="button" class="btn btn-outline-success">Raise to the power of 2</button>
+                    <h6 class="my-3">Actions with two matrixes</h6>
+                    <button type="button" class="btn btn-outline-success">A * B</button>
+                    <button type="button" class="btn btn-outline-success">A + B</button>
+                    <button type="button" class="btn btn-outline-success">A - B</button>
+
+                </div>
+                <hr>
+                <h4 class="row justify-content-center">Results</h4>
                 <div class="row justify-content-center">
                     <div class="col-sm-auto">
-                        fdsfsdf
+                        
                     </div>
                 </div>
             </div>

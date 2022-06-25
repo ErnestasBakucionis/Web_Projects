@@ -5,3 +5,32 @@ body {
     height: 100vh;
     background-color: #eee;
   }
+
+hr {
+  width: 75%;
+  margin: auto;
+}
+
+.divContainers {
+  width: 10%;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 5pt 5pt;
+  margin: 1pt 0pt;
+  box-sizing: border-box;
+}
+
+input[type=number]:focus {
+  background-color: rgb(157, 233, 163);
+}
+
+table {
+  border-collapse: collapse;
+  width: 20;
+}
+
+button {
+  margin: 10pt;
+}
